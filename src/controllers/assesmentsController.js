@@ -88,8 +88,7 @@ export const getAssessment = async (req, res) => {
   try {
     const assessmentId = req.params.id;
 
-    const assessment = await Assessment.findById(assessmentId)
-
+    const assessment = await Assessment.findById(assessmentId);
 
     if (!assessment) {
       return res
