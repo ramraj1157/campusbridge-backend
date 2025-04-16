@@ -1,4 +1,4 @@
-import Assessment from "../models/AssessmentSchema.js";
+import Assessment from "../models/assessmentSchema.js";
 import Submission from "../models/assessmentSubmissionSchema.js";
 
 // Add Assessment
