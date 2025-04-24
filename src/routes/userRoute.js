@@ -47,7 +47,7 @@ router.put(
   updateStudent
 );
 
-router.get("/get-profile", getProfile);
+router.get("/get-profile", authenticateUser, getProfile);
 
 router.post("/logout", logout);
 

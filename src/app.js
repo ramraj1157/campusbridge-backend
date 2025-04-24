@@ -30,10 +30,11 @@ const routes = [
   "http://localhost:5174",
   "http://localhost:5173",
   "http://localhost:5175",
+  "https://campusbridge-student.vercel.app",
 ];
 app.use(
   cors({
-    origin: "https://campusbridge-student.vercel.app",
+    origin: routes,
     credentials: true,
   })
 );

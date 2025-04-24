@@ -232,6 +232,7 @@ export const updateStudent = async (req, res) => {
 export const getProfile = async (req, res) => {
   try {
     const id = req.studentId;
+    console.log(id);
     const studentData = await Student.findById(id).select("-password");
     if (!studentData) {
       return res.json({ success: false, message: "Student not found" });
