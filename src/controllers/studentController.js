@@ -101,6 +101,8 @@ export const loginStudent = async (req, res) => {
     res.setHeader("Authorization", `Bearer ${token}`);
     res.cookie("auth_token", token, {
       httpOnly: true,
+      secure: true, // required for HTTPS
+      sameSite: "None", // use "Strict" or "Lax" for same-site requests only
       expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
     });
 
