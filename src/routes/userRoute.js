@@ -42,15 +42,13 @@ router.post(
 
 router.put(
   "/update-user",
-  authenticateUser,
+
   upload.single("image"),
   updateStudent
 );
 
-router.get("/get-profile", authenticateUser, getProfile);
+router.get("/get-profile", getProfile);
 
 router.post("/logout", logout);
-
-router.get("/get-profile", authenticateUser, getProfile);
 
 export default router;
