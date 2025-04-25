@@ -165,6 +165,7 @@ export const resetPassword = async (req, res) => {
 export const logout = async (req, res) => {
   res.clearCookie("auth_token", {
     httpOnly: true,
+    secure: true,
     sameSite: "None",
   });
 
